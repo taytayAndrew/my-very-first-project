@@ -8,18 +8,18 @@
     <title>导航</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<script src="//at.alicdn.com/t/c/font_3855393_3ka0ior5ybk.js"></script>
+<script src="//at.alicdn.com/t/c/font_3855393_70v9h2zlfqt.js"></script>
 
-<body>
-    <div id="page">
+<body class="preview">
+    <div id="page" >
         <section id="search">
             <div class="search-type">
-                <div class="search-type-button">
+                <div data-type='baidu' class="search-type-button tab-baidu active">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-baidu"></use>
                     </svg>Baidu
                 </div>
-                <div class="search-type-button">
+                <div data-type='bing' class="search-type-button tab-bing ">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-weiruan"></use>
                     </svg>Bing
@@ -41,11 +41,7 @@
                         <li class="tag">baidu</li>
                         <li class="tag">zhihu</li>
                         <li class="tag">v2ex</li>
-                        <li class="tag">jirengu</li>
-                        <li class="tag">baidu</li>
-                        <li class="tag ">zhihu</li>
-                        <li class="tag">v2ex</li>
-                        <li class="tag">jirengu</li>
+           
                     </ul>
                 </li>
                 <li class="item">
@@ -54,29 +50,53 @@
                         <li class="tag">baidu</li>
                         <li class="tag">zhihu</li>
                         <li class="tag">v2ex</li>
-                        <li class="tag">jirengu</li>
-                        <li class="tag">baidu</li>
-                        <li class="tag ">zhihu</li>
-                        <li class="tag">v2ex</li>
-                        <li class="tag">jirengu</li>
+                   
                     </ul>
                 </li>
-                <li class="item">
-                    <h2>common website</h2>
-                    <ul class="panel">
-                        <li class="tag">baidu</li>
-                        <li class="tag">zhihu</li>
-                        <li class="tag">v2ex</li>
-                        <li class="tag">jirengu</li>
-                        <li class="tag">baidu</li>
-                        <li class="tag ">zhihu</li>
-                        <li class="tag">v2ex</li>
-                        <li class="tag">jirengu</li>
-                    </ul>
-                </li>
-            </ul>
+                
         </section>
     </div>
+    <div class="plus">
+        <svg class="icon icon-plus" aria-hidden="true"><use xlink:href="#icon-plus"></use></svg>
+    </div>
+    <div id="setting">
+        <svg class="icon icon-setting" aria-hidden="true"><use xlink:href="#icon-setting"></use></svg>
+        <svg class="icon icon-back" aria-hidden="true"><use xlink:href="#icon-rollback"></use></svg>
+
+    </div>
+    <div class="modal modal-1">
+        <h4>请输入新增内容</h4>
+        <div class="field">
+            <input type="text">
+        </div>
+        <button class="confirm">确定</button>
+        <button class="cancel">取消</button>
+    </div>
+    <div class="modal modal-2">
+        <h4>请输入新增内容</h4>
+        <div class="field">
+            <input type="text">
+        </div>
+        <button class="confirm">确定</button>
+        <button class="cancel">取消</button>
+    </div>
+    <div class="modal modal-3">
+        <h4>添加网站</h4>
+        <div class="field text-1">
+            <input type="text" placeholder="输入网络名称">
+        </div>
+        <div class="field text-2">
+            <input type="text" placeholder="输入网址">
+        </div>
+        <button class="confirm">确定</button>
+        <button class="cancel">取消</button>
+    </div>
+    <script src="js/main.js"></script>
+    <!-- <script>
+        //baidu=https://www.baidu.com/s?wd=
+        //bing=https://cn.bing.com/search?q=
+        
+    </script> -->
 </body>
 
 </html>

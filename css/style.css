@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 ul li {
     list-style: none;
 }
@@ -17,11 +18,12 @@ ul li {
 body {
     font: 14px/1.5 Arial, Helvetica, sans-serif;
     background: url(../images/300771.jpg) center center no-repeat;
-    background-size: cover;
+    background-size:cover;
     min-height: 100vh;
     color: aliceblue;
     padding-bottom: 60px;
 }
+
 #search {
     margin-top: 50px;
     flex-direction: column;
@@ -30,12 +32,12 @@ body {
 }
 
 .icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-  cursor: pointer;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .search-type {
@@ -49,11 +51,17 @@ body {
     border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
- 
+
 }
+
+.search-type-button.active {
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+}
+
 .search-input:hover {
     box-shadow: 0 0 16px 0 rgba(255, 255, 255, .5);
 }
+
 .search-input {
     position: relative;
     display: inline-block;
@@ -72,11 +80,11 @@ body {
     cursor: pointer;
 }
 
-.search-input > input:focus {
+/* .search-input > input:focus {
        width: calc(100vh - 40px);
-    }
+    } */
 
-.search-input > input {
+.search-input>input {
     width: 400px;
     padding: 0 20px 0 10px;
     line-height: 32px;
@@ -86,7 +94,7 @@ body {
     background-color: transparent;
     color: rgb(255, 255, 255);
     transition: all .3s;
-  
+
 }
 
 
@@ -95,7 +103,14 @@ body {
     color: #fff;
     font-size: 32px;
 }
+.website .list h2 .icon-delete{
+    display: none;
 
+}
+.setting .website .list h2 .icon-delete{
+    display: inline;
+
+}
 .website .panel {
     background-color: #fff;
     border-radius: 6px;
@@ -107,6 +122,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
     box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
+    min-height: 20px;
 
 
 }
@@ -120,6 +136,7 @@ body {
     padding: 2px 10px;
     border-radius: 5px;
     margin: 10px 10px;
+    position: relative;
 }
 
 .website .tag:nth-child(4n+1) {
@@ -129,11 +146,119 @@ body {
 .website .tag:nth-child(4n+2) {
     background-color: #159f68;
 }
+
 .website .tag:nth-child(4n+3) {
     background-color: bisque;
 }
+
 .website .tag:nth-child(4n+4) {
     background-color: rgb(32, 85, 127);
 }
 
+#setting {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    color: #fff;
 
+}
+
+#setting .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.plus {
+    margin-top: 30px;
+}
+
+.plus .icon {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+body.preview .icon-back {
+    display: none;
+}
+
+body.preview .plus {
+    display: none;
+}
+
+body.preview .icon-setting {
+    display: block;
+}
+
+body.preview .icon-editor {
+    display: none;
+}
+
+body.preview .icon-add {
+    display: none;
+}
+
+body.preview .panel .icon-delete_fill {
+    display: none;
+}
+
+body.setting .panel .icon-delete_fill  {
+    position: absolute;
+    top: -19px;;
+    left:8px;
+    background-color: transparent;
+}
+body.setting .icon-editor {
+    display: inline-block;
+    
+}
+body.setting .plus {
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 30px);
+}
+
+body.setting .icon-back {
+    display: block;
+}
+
+body.setting .icon-setting {
+    display: none;
+}
+
+body.setting .panel .icon-add {
+    display: block;
+}
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -100vh);
+    width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: all .7s;
+}
+.modal.show {
+    opacity: 1;
+    transform: translate(-50% , -50%);
+}
+.modal .field {
+    margin: 10px 0;
+}
+
+.modal .field input {
+    line-height: 20px;
+    width: 100%;
+}
+
+.modal button {
+    display: inline-block;
+    padding: 10px;
+    
+    
+
+}
